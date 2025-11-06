@@ -1,0 +1,212 @@
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h2>Calculadora Tributária para Imóveis</h2>
+        <p>Calcule automaticamente os impostos e taxas do seu imóvel e descubra oportunidades de economia</p>
+    </div>
+</section>
+
+<!-- Calculator Section -->
+<section class="calculator">
+    <div class="container">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">Simulador de Tributos</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #666;">
+            Preencha os dados do seu imóvel para calcular automaticamente os principais tributos e encargos.
+        </p>
+        
+        <div class="calculator-container">
+            <!-- Formulário de entrada -->
+            <div class="calculator-form">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Dados do Imóvel</h3>
+                
+                <div class="form-group">
+                    <label for="propertyType">Tipo de Imóvel</label>
+                    <select id="propertyType">
+                        <option value="residencial">Residencial</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="rural">Rural</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="propertyValue">Valor do Imóvel (R$)</label>
+                    <input type="number" id="propertyValue" placeholder="Ex: 500000" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">Município</label>
+                    <select id="city">
+                        <option value="sao-paulo">São Paulo/SP</option>
+                        <option value="rio-de-janeiro">Rio de Janeiro/RJ</option>
+                        <option value="belo-horizonte">Belo Horizonte/MG</option>
+                        <option value="brasilia">Brasília/DF</option>
+                        <option value="salvador">Salvador/BA</option>
+                        <option value="outro">Outro Município</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="area">Área Construída (m²)</label>
+                    <input type="number" id="area" placeholder="Ex: 120" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="usage">Uso do Imóvel</label>
+                    <select id="usage">
+                        <option value="propria">Moradia Própria</option>
+                        <option value="aluguel">Aluguel</option>
+                        <option value="comercial">Uso Comercial</option>
+                        <option value="vazio">Imóvel Vazio</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ownerAge">Idade do Proprietário</label>
+                    <input type="number" id="ownerAge" placeholder="Ex: 45" min="0" max="120">
+                </div>
+                
+                <button id="calculateBtn" class="btn">Calcular Tributos</button>
+                <button id="resetBtn" class="btn btn-secondary" style="margin-top: 1rem;">Limpar Campos</button>
+            </div>
+            
+            <!-- Resultados -->
+            <div class="calculator-results">
+                <h3 style="color: var(--primary-color);">Resultados do Cálculo</h3>
+                
+                <div class="result-item">
+                    <h3>IPTU Anual</h3>
+                    <div class="result-value" id="iptuResult">R$ 0,00</div>
+                    <div class="result-description">Imposto sobre a Propriedade Predial e Territorial Urbana</div>
+                </div>
+                
+                <div class="result-item">
+                    <h3>ITBI (na compra)</h3>
+                    <div class="result-value" id="itbiResult">R$ 0,00</div>
+                    <div class="result-description">Imposto sobre Transmissão de Bens Imóveis</div>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Taxa de Limpeza</h3>
+                    <div class="result-value" id="cleaningResult">R$ 0,00</div>
+                    <div class="result-description">Taxa de Coleta de Lixo Urbano</div>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Taxa de Incêndio</h3>
+                    <div class="result-value" id="fireResult">R$ 0,00</div>
+                    <div class="result-description">Taxa do Corpo de Bombeiros</div>
+                </div>
+                
+                <div class="tax-breakdown">
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-color);">Detalhamento Anual</h4>
+                    
+                    <div class="tax-item">
+                        <span class="tax-name">IPTU</span>
+                        <span class="tax-value" id="iptuDetail">R$ 0,00</span>
+                    </div>
+                    
+                    <div class="tax-item">
+                        <span class="tax-name">Taxa de Limpeza</span>
+                        <span class="tax-value" id="cleaningDetail">R$ 0,00</span>
+                    </div>
+                    
+                    <div class="tax-item">
+                        <span class="tax-name">Taxa de Incêndio</span>
+                        <span class="tax-value" id="fireDetail">R$ 0,00</span>
+                    </div>
+                    
+                    <div class="tax-item">
+                        <span class="tax-name">Taxa Condominial (estimada)</span>
+                        <span class="tax-value" id="condoDetail">R$ 0,00</span>
+                    </div>
+                    
+                    <div class="total-tax">
+                        <span>Total Anual:</span>
+                        <span id="totalDetail">R$ 0,00</span>
+                    </div>
+                </div>
+                
+                <div class="result-item" style="background-color: #e8f5e9; border-left-color: var(--success-color);">
+                    <h3>Economia Potencial</h3>
+                    <div class="result-value" id="savingsResult">R$ 0,00</div>
+                    <div class="result-description">Valor que poderia ser economizado com orientação fiscal adequada</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="comparison">
+    <div class="container">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">Comparação: Gestão Manual vs Sistema</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #666;">
+            Veja a diferença entre calcular seus tributos manualmente e usar nosso sistema especializado
+        </p>
+        
+        <div class="comparison-container">
+            <div class="comparison-card">
+                <h3>Gestão Manual</h3>
+                <div class="comparison-value manual-value" id="manualTotal">R$ 0,00</div>
+                <p>Valor total estimado de tributos sem otimização</p>
+                <ul style="text-align: left; margin-top: 1rem; list-style-position: inside;">
+                    <li>Risco de esquecimento de pagamentos</li>
+                    <li>Multas por atraso</li>
+                    <li>Falta de aproveitamento de benefícios</li>
+                    <li>Dificuldade em acompanhar alterações</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card">
+                <h3>Com Nosso Sistema</h3>
+                <div class="comparison-value system-value" id="systemTotal">R$ 0,00</div>
+                <p>Valor otimizado com nosso sistema especializado</p>
+                <ul style="text-align: left; margin-top: 1rem; list-style-position: inside;">
+                    <li>Alertas automáticos de vencimento</li>
+                    <li>Identificação de benefícios fiscais</li>
+                    <li>Pagamento facilitado</li>
+                    <li>Atualização automática de legislação</li>
+                </ul>
+                
+                <div class="savings" id="comparisonSavings">Economia de R$ 0,00</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tips Section -->
+<section class="tips">
+    <div class="container">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">Dicas para Redução Tributária</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #666;">
+            Conheça algumas estratégias para reduzir legalmente a carga tributária do seu imóvel
+        </p>
+        
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-icon">🏡</div>
+                <h3>Isenção para Moradia Própria</h3>
+                <p>Muitos municípios oferecem isenção ou desconto no IPTU para imóveis utilizados como moradia própria, especialmente para idosos e pessoas com deficiência.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">📋</div>
+                <h3>Revisão do Valor Venal</h3>
+                <p>Verifique se o valor venal do imóvel declarado pela prefeitura está correto. Em muitos casos, é possível solicitar a revisão e reduzir a base de cálculo do IPTU.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">💳</div>
+                <h3>Pagamento à Vista</h3>
+                <p>Pagamento do IPTU à vista geralmente oferece descontos significativos em relação ao parcelamento. Planeje-se para aproveitar essa economia.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">📅</div>
+                <h3>Programe os Pagamentos</h3>
+                <p>Organize um calendário fiscal para não perder prazos e evitar multas por atraso, que podem aumentar significativamente o valor a pagar.</p>
+            </div>
+        </div>
+    </div>
+</section>

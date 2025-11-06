@@ -1,0 +1,116 @@
+/* src/app/login/login.component.css */
+
+/* ---------------------------------------------------- */
+/* CONTAINER (Fundo Laranja) */
+/* ---------------------------------------------------- */
+.login-container {
+    height: 100%; 
+    width: 100%;
+    background-color: #325a7f;
+    
+    /* Centralização com um pequeno padding superior para respirar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------- */
+/* CARD (A caixa branca) */
+/* ---------------------------------------------------- */
+.login-card {
+    background-color: white;
+    padding: 30px; /* Reduzido levemente */
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Sombra mais suave e profunda */
+    width: 100%;
+    max-width: 350px; /* Tamanho mais compacto */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    color: #888;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* ---------------------------------------------------- */
+/* FORMULÁRIO E INPUTS */
+/* ---------------------------------------------------- */
+.login-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Borda mais suave */
+    border-radius: 8px; /* Cantos do input mais arredondados */
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.login-input:focus {
+    border-color: #ff5722; /* Foco laranja */
+    outline: none;
+}
+
+/* ---------------------------------------------------- */
+/* BOTÃO DE LOGIN */
+/* ---------------------------------------------------- */
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.login-button:hover:not([disabled]) {
+    background-color: #e64a19; /* Laranja mais escuro no hover */
+}
+
+/* Estilo para botão desabilitado (melhor feedback visual) */
+.login-button[disabled] {
+    background-color: #ff9800; 
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ---------------------------------------------------- */
+/* RODAPÉ DO LOGIN */
+/* ---------------------------------------------------- */
+.login-footer {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.login-link {
+    color: #e64a19; /* Laranja mais forte */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}

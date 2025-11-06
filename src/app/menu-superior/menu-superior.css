@@ -1,0 +1,38 @@
+/* Puxando a variável de cor do seu outro projeto 
+  (pode trocar por qualquer cor, ex: #0d6efd) 
+*/
+:root {
+  --cor-destaque: #3498db; 
+}
+
+/* Alvo: O link (.nav-link) que está com a classe .active 
+  (que o Angular adiciona) DENTRO de uma .navbar
+*/
+.navbar .nav-link.active {
+  color: #fff !important; /* Força o texto a ser branco (no tema dark) */
+  font-weight: 600;      /* Deixa em negrito */
+  position: relative;    /* Prepara para o sublinhado */
+}
+
+/* Cria um "pseudo-elemento" (::after) para ser o sublinhado.
+  Isso é mais elegante que um 'border-bottom'.
+*/
+.navbar .nav-link.active::after {
+  content: ''; /* Conteúdo vazio, obrigatório */
+  position: absolute;
+  
+  /* Posição do sublinhado */
+  bottom: 8px; /* Distância do fundo do link */
+  left: 10px;  /* Início (respeitando o padding) */
+  right: 10px; /* Fim (respeitando o padding) */
+
+  /* Visual */
+  height: 3px;
+  background-color: var(--cor-destaque);
+  border-radius: 2px;
+}
+
+/* Bônus: Um efeito sutil de 'hover' nos links que NÃO estão ativos */
+.navbar .nav-link:not(.active):hover {
+  color: #c0c0c0 !important; /* Um cinza-claro ao passar o mouse */
+}

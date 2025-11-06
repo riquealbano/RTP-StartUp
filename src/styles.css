@@ -1,0 +1,9 @@
+/* src/styles.css (ou o CSS global) */
+
+/* Garante que a aplicação use a altura total da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Outros estilos de fonte/background globais */
+}

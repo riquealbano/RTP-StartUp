@@ -1,0 +1,90 @@
+/* -------------------------------------- */
+/* ESTILOS DE CONTAINER GERAL (Pode ir em styles.css) */
+/* -------------------------------------- */
+.login-container, .signup-container {
+    /* Define a cor de fundo (Fundo Vermelho/Laranja do FoodExpress) */
+    background-color: #325a7f; 
+    
+    /* Centraliza o card vertical e horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Garante que o container ocupe a altura total da tela (Viewport Height) */
+    min-height: 100vh;
+    
+    /* Pula a altura do menu superior, se houver */
+    padding-top: 50px; 
+    box-sizing: border-box;
+}
+
+/* -------------------------------------- */
+/* ESTILOS DE CARD E FORMULÁRIO (Component CSS) */
+/* -------------------------------------- */
+.login-card, .signup-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-logo, .signup-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-subtitle, .signup-subtitle {
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Estilo para os inputs */
+.login-form input, .signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Estilo para o botão */
+.login-button, .signup-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff5722; /* Cor principal */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover:not([disabled]), .signup-btn:hover:not([disabled]) {
+    background-color: #e64a19;
+}
+
+.login-button[disabled], .signup-btn[disabled] {
+    background-color: #ff9800; /* Cor mais clara quando desabilitado */
+    cursor: not-allowed;
+}
+
+.login-footer, .signup-footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+}

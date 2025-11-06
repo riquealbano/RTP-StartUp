@@ -1,0 +1,36 @@
+<div class="login-container">
+    <div class="login-logo">Realidade Tributária dos Proprietários</div>
+    
+    <div class="login-card">
+        <h1 class="login-title">Bem-vindo!</h1>
+        <p class="login-subtitle">Faça login para economizar com seu imóvel:</p>
+
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+            
+            <input 
+                type="email"
+                placeholder="E-mail"
+                formControlName="email" 
+                class="login-input"
+                required
+            >
+            
+            <input 
+                type="password"
+                placeholder="Senha"
+                formControlName="password"
+                class="login-input"
+                required
+            >
+
+            <button type="submit" class="login-button" [disabled]="loginForm.invalid">
+                Entrar
+            </button>
+        </form>
+
+        <p class="login-footer">
+            Novo por aqui? 
+            <a routerLink="/cadastro" class="login-link">Criar nova conta</a>
+        </p>
+    </div>
+</div>

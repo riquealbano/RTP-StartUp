@@ -1,0 +1,56 @@
+<div class="signup-container">
+    <div class="signup-card">
+        <h1 class="signup-title">Crie a sua conta</h1>
+        <p class="signup-subtitle">Leva menos de 1 minuto para se cadastrar!</p>
+
+        <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="handleSignup()">
+            
+            <label>E-mail</label>
+            <input 
+                type="email"
+                placeholder="voce@email.com"
+                formControlName="email" 
+                required
+            >
+            
+            <label>Senha</label>
+            <input 
+                type="password"
+                placeholder="Crie uma senha"
+                formControlName="password"
+                required
+            >
+            
+            <label>Confirme a Senha</label>
+            <input 
+                type="password"
+                placeholder="Confirme a senha"
+                formControlName="passwordConfirm"
+                required
+            >
+            
+            <div *ngIf="signupForm.errors?.['mismatch'] && signupForm.get('passwordConfirm')?.touched" 
+                style="color: red; margin-bottom: 15px;">
+                As senhas não coincidem.
+            </div>
+
+            <div *ngIf="signupForm.get('password')?.hasError('minlength') && signupForm.get('password')?.touched"
+                style="color: red; font-size: 12px; margin-top: -10px;">
+                A senha deve ter pelo menos 6 caracteres.
+            </div>
+
+            <button 
+                type="submit" 
+                class="signup-btn" 
+                [disabled]="signupForm.invalid"
+            >
+                Cadastrar
+            </button>
+        </form>
+
+        <p class="signup-footer">
+            Já tem uma conta? 
+            <a routerLink="/login" class="login-link">Entrar</a>
+        </p>
+    </div>
+</div>
