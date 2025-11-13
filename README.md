@@ -1,11 +1,26 @@
 # RTP - Realidade Tributária dos Proprietários
 
-Este projeto foi feito utlizando [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.1.
+Este projeto foi feito utlizando [Angular CLI](https://github.com/angular/angular-cli)
 
-## Development server
+## Tecnologias
 
+Angular CLI - Versão: 20.3.1
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+SupaBase - Gerar e consumir URL's e API's
+
+Postman - Testes de API
+
+VsCode IDE - Escrever todo o código
+
+## Linguagens de Programação
+
+HTML + CSS
+
+Typescript
+
+## Telas e Referência
+
+a
 
 ## Additional Resources
 
