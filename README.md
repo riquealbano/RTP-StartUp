@@ -1,59 +1,23 @@
-# RTP
+# RTP - Realidade Tributária dos Proprietários
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+Este projeto foi feito utlizando [Angular CLI](https://github.com/angular/angular-cli)
 
-## Development server
+## Tecnologias
 
-To start a local development server, run:
+Angular CLI - Versão: 20.3.1
 
-```bash
-ng serve
-```
+SupaBase - Gerar e consumir URL's e API's
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Postman - Testes de API
 
-## Code scaffolding
+VsCode IDE - Gerir documento e escrever código
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Linguagens de Programação
 
-```bash
-ng generate component component-name
-```
+HTML + CSS
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Typescript
 
-```bash
-ng generate --help
-```
+## Recurso Adicional
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para mais informações de como usar o Angular CLI, assim como detalhes ou referências, visite o site [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
