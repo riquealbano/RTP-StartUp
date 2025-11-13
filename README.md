@@ -18,10 +18,6 @@ HTML + CSS
 
 Typescript
 
-## Telas e Referência
-
-a
-
 ## Recurso Adicional
 
 Para mais informações de como usar o Angular CLI, assim como detalhes ou referências, visite o site [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
