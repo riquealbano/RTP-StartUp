@@ -10,7 +10,7 @@ SupaBase - Gerar e consumir URL's e API's
 
 Postman - Testes de API
 
-VsCode IDE - Escrever todo o código
+VsCode IDE - Gerir documento e escrever código
 
 ## Linguagens de Programação
 
