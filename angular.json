@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/RTP/browser",
+            "outputPath": "dist/RTP",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
